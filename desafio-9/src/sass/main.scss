@@ -1,0 +1,36 @@
+$baseMargin: 8em;
+$basePadding: 4em;
+
+$margins: (
+	pc: $baseMargin,
+	notebook: $baseMargin - 2,
+    tablet: $baseMargin - 2.5,
+    mobile: $baseMargin - 6
+);
+
+$paddings: (
+	pc: $basePadding,
+	notebook: $basePadding - 2,
+    tablet: $basePadding - 2.5,
+    mobile: $basePadding - 3
+);
+
+#pc {
+    margin: map-get($margins, pc);
+    padding: map-get($paddings, pc);
+};
+
+#notebook {
+    margin: map-get($margins, notebook);
+    padding: map-get($paddings, notebook);
+};
+
+#tablet {
+    margin: map-get($margins, tablet);
+    padding: map-get($paddings, tablet);
+};
+
+#mobile {
+    margin: map-get($margins, mobile);
+    padding: map-get($paddings, mobile);
+};

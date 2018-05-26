@@ -1,0 +1,230 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	background: rgb(47, 58, 80);
+	overflow: hidden;
+}
+
+section {
+	position: absolute;
+	top: 80%;
+	left: 5%;
+	transform: scale(2.5);
+}
+
+	section article div {
+		border-radius: 50%;
+	}
+
+.sun {
+	width: 90px;
+	height: 90px; 
+    background: #e06318;
+    -webkit-animation: solar-system 12s linear infinite reverse;
+    -moz-animation: solar-system 12s linear infinite reverse;
+    animation: solar-system 12s linear infinite reverse;
+}
+
+section article:nth-child(9) div {
+	width: 10px;
+	height: 10px; 
+    background: #9f5e27;
+    top: 27%;
+    position: absolute;
+    
+}
+
+	section article:nth-child(9) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -79px 0 0 -80px;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		-webkit-animation: solar-system 2s linear infinite reverse;
+		-moz-animation: solar-system 2s linear infinite reverse;
+		animation: solar-system 2s linear infinite reverse;
+		
+	}
+
+section article:nth-child(8) div {
+	width: 15px;
+	height: 15px; 
+    background:#BEB769;
+    position: absolute;
+    top: 29%;
+}
+
+	section article:nth-child(8) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -119px 0 0 -120px;
+		width: 230px;
+		height: 230px;
+		border-radius: 50%;
+		-webkit-animation: solar-system 5s linear infinite reverse;
+		-moz-animation: solar-system 5s linear infinite reverse;
+		animation: solar-system 5s linear infinite reverse;  	
+	}
+
+section article:nth-child(7) div {
+	width: 18px;
+	height: 18px; 
+    background:#11abe8;
+    position: absolute;
+    top: 31%;
+}
+
+	section article:nth-child(7) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -169px 0 0 -170px;
+		width: 330px;
+		height: 330px;
+		border-radius: 50%;
+		-webkit-animation: solar-system 9s linear infinite reverse;
+		-moz-animation: solar-system 9s linear infinite reverse;
+		animation: solar-system 9s linear infinite reverse;
+		
+	}
+
+section article:nth-child(6) div {
+	width: 12.5px;
+	height: 12.5px; 
+    background:#cf3922;
+    position: absolute;
+    top: 36%;
+}
+
+	section article:nth-child(6) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -209px 0 0 -210px;
+		width: 410px;
+		height: 410px;
+		border-radius: 50%;
+		-webkit-animation: solar-system 12s linear infinite reverse;
+		-moz-animation: solar-system 12s linear infinite reverse;
+		animation: solar-system 12s linear infinite reverse;
+	}
+
+section article:nth-child(5) div {
+	width: 32px;
+	height: 32px; 
+    background:#c76e3a;
+    position: absolute;
+    top: 30%;
+}
+
+	section article:nth-child(5) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -279px 0 0 -280px;
+		width: 560px;
+		height: 560px;
+		border-radius: 50%;
+		-webkit-animation: solar-system 25s linear infinite reverse;
+		-moz-animation: solar-system 25s linear infinite reverse;
+		animation: solar-system 25s linear infinite reverse;
+	}
+
+section article:nth-child(4) div {
+	width: 20px;
+	height: 20px; 
+    background:#e7c195;
+    border: 5px solid #e7c195;
+    padding: 5px;
+    background-clip: content-box;
+    position: absolute;
+    top: 30%;
+  
+}
+
+	section article:nth-child(4) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -359px 0 0 -360px;
+		width: 710px;
+		height: 710px;
+		border-radius: 50%;
+		-webkit-animation: solar-system 35s linear infinite reverse;
+		-moz-animation: solar-system 35s linear infinite reverse;
+		animation: solar-system 35s linear infinite reverse;
+		
+	}
+
+section article:nth-child(3) div {
+	width: 48px;
+	height: 48px; 
+    background:#b5e3e4;
+    position: absolute;
+    top: 32%;
+}
+
+	section article:nth-child(3) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -449px 0 0 -450px;
+		width: 900px;
+		height: 900px;
+		border-radius: 50%;
+		-webkit-animation: solar-system 50s linear infinite reverse;
+		-moz-animation: solar-system 50s linear infinite reverse;
+		animation: solar-system 50s linear infinite reverse;
+	}
+
+section article:nth-child(2) div {
+	width: 45px;
+	height: 45px; 
+    background:#176e9e;
+    position: absolute;
+    top: 34%;
+}
+
+	section article:nth-child(2) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -549px 0 0 -550px;
+		width: 1100px;
+		height: 1100px;
+		border-radius: 50%;
+		-webkit-animation: solar-system 75s linear infinite reverse;
+		-moz-animation: solar-system 75s linear infinite reverse;
+		animation: solar-system 75s linear infinite reverse;
+		
+	}
+
+section article:nth-child(1) div {
+	width: 10px;
+	height: 10px; 
+    background:#fffff1;
+    position: absolute;
+    top: 44%;
+}
+
+	section article:nth-child(1) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -619px 0 0 -620px;
+		width: 1250px;
+		height: 1250px;
+		border-radius: 50%;
+		-webkit-animation: solar-system 95s linear infinite reverse;
+		-moz-animation: solar-system 105s linear infinite reverse;
+		animation: solar-system 105s linear infinite reverse;
+		
+	}
+
+	@keyframes solar-system {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+	}

@@ -1,0 +1,788 @@
+@charset "utf-8";
+
+/* 
+	Author: lisandropat
+	Author's webside: http://lisandropat.me
+	Author's studio: Myval Studio
+	Author's studio's website: http://myval.studio
+	
+	For more information or licence terms contact: contact@lisandropat.me with 'Everlook' subject 
+	
+	Licensed under the MIT license - http://opensource.org/licenses/MIT
+	
+	Mobile First Seed by Myval Studio @ Update 05/04/2018
+	
+	Copyright 2018 Myval Studio
+*/
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css');
+@import url('https://use.fontawesome.com/releases/v5.0.6/css/all.css');
+
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,900');
+
+html,body {
+	overflow: hidden;
+}
+
+	body {
+		text-align: center;
+		color: #fff;
+		background-color: #282E3A;
+		font-family: 'Nunito Sans', sans-serif;
+		font-weight: 600;
+}
+
+	::-webkit-scrollbar {
+	    display: none;
+	}
+
+/* PALETTE:
+	Default color: #
+	    Default dark: #
+	    Default light: #
+	Background color: #282E3A
+	    Background dark: #1B1F25
+		Background light: #
+		
+	background: #282E3A;
+	background: linear-gradient(#282E3A, #1B1F25);
+*/
+
+/* Carga */
+
+#carga {
+	position: absolute;
+	overflow: hidden;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	cursor: none;
+	background-color: #1B1F25;
+		animation-name: desapareceheader;
+		animation-duration: 2s;
+		animation-delay: 5s;
+		animation-fill-mode: forwards;
+}
+
+		@keyframes desapareceheader { 0% { opacity: 1; } 100% { opacity: 0; display: none; cursor: default; } }
+
+	#carga aside {
+		position: absolute;
+		top: 50%; left: 50%;
+		transform: translate(-50%,-50%);
+	}
+
+	#carga aside img {
+		width: 40%;
+			animation-name: cargaimg;
+			animation-duration: 3s;
+			animation-timing-function: cubic-bezier(1,.01,.13,.99);
+			animation-delay: 0s;
+			animation-iteration-count: infinite;
+	}
+
+
+		@keyframes cargaimg {
+			0% { opacity: 0; width: 40%; } 50% { opacity: 1; width: 42%; } 100% { opacity: 0; width: 40%; }
+		}
+
+/* /Carga */
+
+main {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+		animation-name: aparece;
+		animation-duration: 2s;
+		animation-timing-function: cubic-bezier(1,.01,.13,.99);
+		animation-delay: 6s;
+		animation-fill-mode: forwards;
+}
+
+	@keyframes aparece {
+		0% { opacity: 0; } 100% { opacity: 1; }
+	}
+
+/* Web GL */
+
+#webgl {
+	opacity: 0;
+		animation-name: desapareceheader;
+		animation-direction: reverse;
+		animation-duration: 1s;
+		animation-delay: 8s;
+		animation-fill-mode: forwards;
+}
+
+	canvas {
+		position: fixed;
+		width: 100%;
+		left: 0;
+		top: 0;
+		z-index: -10;
+	}
+
+/* /Web GL */
+
+/* Nav */
+
+nav {
+	position: absolute;
+	z-index: 100;
+	right: 0;
+	top: 0;
+}
+
+	nav div {
+		padding: 2em 3em;
+	}
+
+		nav div span {
+			color: #fff;
+			font-size: 2rem;
+			margin-left: .25em;
+			opacity: .9;
+			animation-name: navSpan;
+			animation-duration: 10s;
+			animation-timing-function: cubic-bezier(1,.01,.13,.99);
+			animation-delay: 5s;
+			animation-iteration-count: infinite;
+			cursor: pointer;
+		}
+
+			@keyframes navSpan {
+				0%, 40%, 60%, 100% { transform: scale(1); }
+				50% { transform: scale(1.25); }
+			}
+
+	#menu {
+		position: absolute;
+		z-index: 101;
+		width: 100%;
+		height: 100%;
+		overflow-y: scroll;
+		background-color: rgba(27, 31 ,37, .9); /* #1B1F25; */
+		bottom: 0;
+		display: none;
+	}
+
+		#menu span {
+			position: absolute;
+			right: 2.5em;
+			top: 2em;
+			font-size: 1.5rem;
+			cursor: pointer;
+		}
+
+		#menu article {
+			margin: 5em 1.5em;
+		}
+
+		#menu article div {
+			font-size: 1.5rem;
+			text-align: left;
+			text-transform: uppercase;
+			margin: 0.75em 1em;
+			cursor: pointer;
+		}
+			
+			#menu article div a {
+				text-decoration: none;
+				color: #fff;
+			}
+		
+		#menu article aside {
+			margin: 7.5em 0 3em -0.5em;
+		}
+
+			#menu article aside div {
+				font-size: 1.75rem;
+				padding-bottom: 0.5em;
+				border-bottom: 1px solid #fff;
+				margin-bottom: 1.25em;
+			}
+
+/* /Nav */
+
+/* Header */
+
+header {
+	position: absolute;
+	overflow: hidden;
+	box-shadow: inset 0px 100px 100px -100px rgba(27, 31 ,37, .25);
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+}
+
+	header aside {
+		position: absolute;
+		top: 50%; left: 50%;
+		transform: translate(-50%, -50%) scale(1.5);
+		z-index: 3;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	header aside img, header span {
+		position: relative;
+		transform: scale(0); opacity: 0;
+		animation-duration: 20s;
+		animation-name: headerSpan;
+		animation-timing-function: cubic-bezier(1,.01,.13,.99);
+		animation-iteration-count: infinite;
+	}
+
+		@keyframes headerSpan {
+			0%, 50%, 100% { transform: scale(0); opacity: 0; }
+			5%, 45% { transform: scale(1); opacity: 1; }
+		}
+
+		header aside img {
+			top: 1em;
+			animation-delay: 10s;
+			width: 100%;
+		}
+
+		header span {
+			top: -1em;
+			animation-delay: 0s;
+			width: 100%;
+			font-size: 4rem;
+		}
+
+/* /Header */
+
+/* Footer */
+
+footer {
+	position: absolute;
+	z-index: 3;
+	text-align: left;
+	width: 100%;
+	height: auto;
+	bottom: 0;
+	padding: 0 0 2em 2.5em;
+}
+
+	footer a {
+		position: relative;
+		z-index: 2;
+		color: #fff;
+		font-size: 1.75rem;
+		margin: 0.25em;
+		opacity: .5;
+		transition: all 0.5s ease-in-out;
+	}
+
+		footer a:active, footer a:hover {
+			opacity: 1;
+			transform: scale(1.25);
+		}
+
+/* /Footer */
+
+/* Descargar */
+
+#delk {
+    overflow: hidden;
+}
+
+    .barrafondodelk {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        z-index: 11;
+        background: linear-gradient(#282E3A, #1B1F25);
+        height: 100%;
+        width: 100%;
+        display: block;
+        animation-name: barrafondodelk;
+        animation-duration: 2s;
+        animation-timing-function: cubic-bezier(1,.01,.13,.99);
+        animation-delay: 0.7s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes barrafondodelk {
+        0% { opacity: 0; }
+
+        100% { opacity: 0.6; }
+    }
+
+.barradescargar {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    z-index: 12;
+    background: linear-gradient(#282E3A, #1B1F25);
+    height: 80%;
+    width: 90%;
+	margin: auto;
+	transform: scale(0,0);
+    display: block;
+    animation-name: delkintro;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(1,.01,.13,.99);
+    animation-delay: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes delkintro { 0% { transform: scale(0,0); } 80% { transform: scale(1.1,1.1) } 100% { transform: scale(1,1); } }
+
+	.descargarcont {
+		position: absolute;
+		margin: 0 auto;
+		padding: 0 0.75em;
+		top: 50%;
+		transform: translateY(-52%);
+	}
+
+		.descargarcont p {
+			font-weight: 800;
+			font-size: 1.5rem;
+			text-transform: uppercase;
+		}
+
+		.descargarcont i {
+			position: relative;
+			top: -0.75em;
+			font-style: normal;
+   			font-size: 1.25rem; 
+			text-transform: uppercase;  
+		}
+
+		.descargarcont hr {
+			margin-top: 1em;
+			margin-bottom: 1em;
+			width: 2em;
+		}
+
+		.descargarcont a { text-decoration: none; }
+
+		.descargarcont span {
+			margin-right: 10px;
+		}
+
+		.descargarcont div { 
+			transition: all 0.5s cubic-bezier(1,.01,.13,.99); 
+			display: block;
+			margin: 0 auto;
+			background-color: #fff;
+			text-transform: uppercase;
+			font-weight: 900;
+			color: #282E3A;
+		}
+
+		@keyframes botondescarga {
+			0%, 30%, 70%, 100% { transform: scale(1.4); } 50% { transform: scale(1.6); }
+		}
+
+		.descargarcont div:hover, .descargarcont div:active {
+			transform: scale(1.1);
+		}
+
+		.descargarcont #descargarahora {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			white-space: nowrap;
+			font-size: 1.5rem;
+			padding: 1em 1.25em;
+			margin-bottom: 1.5em;
+			width: 75%;
+		}
+
+		.descargarcont #descargarmas {
+			font-size: 1.25rem;
+			padding: 0.75em 0.15em;
+			display: flex;
+			align-items: center;
+			white-space: nowrap;
+			justify-content: center;
+			width: 80%;
+		}
+
+		.descargarcont .fa-plus-circle {
+			animation-name: botondescarga;
+			animation-duration: 3s;
+			animation-delay: 0.5s;
+			animation-iteration-count: infinite;
+		}
+
+		.descargarcont .fa-arrow-circle-down {
+			animation-name: botondescarga;
+			animation-duration: 3s;
+			animation-delay: 1s;
+			animation-iteration-count: infinite;
+		}
+
+.delkcont {
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin: 0;
+    /* padding: 1em; */
+}
+
+.cerrar {
+    position: relative;
+    top: -3%;
+	left: 80%;
+    z-index: 100;
+    background-color: #fff;
+    display: box;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(1,.01,.13,.99);
+}
+
+    .cerrar span {
+        color: #343B49;
+        font-size: 21px;
+        font-weight: 800;
+        position: relative;
+        top: 15px;
+        transition: all 0.5s cubic-bezier(1,.01,.13,.99);
+    }
+
+    .cerrar:hover span { transform: scale(1.3,1.3); }
+
+    .cerrar:hover { transform: scale(1.2,1.2); }
+
+/* /Descargar */
+
+/* Play */
+
+#play {
+	overflow: hidden;
+}
+
+	.barraplay {
+		position: absolute;
+		z-index: 12;
+		background: linear-gradient(#282E3A, #1B1F25);
+		height: 100%;
+		width: 100%;
+		top: 140%;
+		padding: 0;
+		margin: 0;
+		display: block;
+			animation-name: playintro;
+			animation-duration: 2s;
+			animation-timing-function: cubic-bezier(1,.01,.13,.99);
+			animation-fill-mode: forwards;
+	}
+
+	@keyframes playintro { 0% { top: 140%; } 100% { top: 0; } }
+
+		.barraplay .video {
+			position: absolute;
+			text-align: center;
+			height: 100%;
+			width: 100%;
+			background-color: #111;
+			padding: 0;
+			margin: 0;
+			opacity: 0;
+			display: block;
+				animation-name: videointro;
+				animation-duration: 2s;
+				animation-timing-function: cubic-bezier(1,.01,.13,.99);
+				animation-delay: 1.5s;
+				animation-fill-mode: forwards;
+		}
+
+		@keyframes videointro { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+				.video img {
+					position: absolute;
+					right: 10%;
+					bottom: 10%;
+					width: 20%;
+				}
+
+iframe {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	background-color: #111;
+	background-size: cover;
+}
+
+.playcont {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: block;
+	padding: 0;
+	margin: 0;
+	/* padding: 1em; */
+}
+
+	.barraout {
+			position: absolute;
+			left: -140%;
+			z-index: 200;
+			background: linear-gradient(#282E3A, #1B1F25);
+			height: 100%;
+			width: 100%;
+			display: block;
+				animation-name: barraout;
+				animation-duration: 2s;
+				animation-timing-function: cubic-bezier(1,.01,.13,.99);
+				animation-delay: 0.2s;
+				animation-fill-mode: forwards;
+		}
+
+			@keyframes barraout {
+				0% { left: -140%; }
+
+				40%, 60% { left: 0; }
+
+				100% { left: 140%; }
+			}
+
+.volver {
+	position: fixed;
+	z-index: 100;
+	background-color: #fff;
+	display: box;
+	height: 50px;
+	width: 50px;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.5s cubic-bezier(1,.01,.13,.99);
+	left: 10%;
+	top: -10%;
+		animation-name: volverbox;
+		animation-duration: 2s;
+		animation-timing-function: cubic-bezier(1,.01,.13,.99);
+		animation-delay: 0.75s;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes volverbox {
+		0% { top: -20%; }
+
+		100% { top: 10%; }
+	}
+
+	.volver span {
+		color: #343B49;
+		font-size: 21px;
+		font-weight: 800;
+		position: relative;
+		top: 15px;
+		transition: all 0.5s cubic-bezier(1,.01,.13,.99);
+	}
+
+	.volver:hover span { transform: scale(1.3,1.3); }
+
+	.volver:hover { transform: scale(1.2,1.2);  }
+
+/* /Play */
+
+/* IELK */
+
+#ielk {
+	overflow: hidden;
+}
+
+	.barrafondoielk {
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			z-index: 90;
+			background: linear-gradient(#282E3A, #1B1F25);
+			height: 100%;
+			width: 100%;
+			display: block;
+				animation-name: barrafondoielk;
+				animation-duration: 2s;
+				animation-timing-function: cubic-bezier(1,.01,.13,.99);
+				animation-delay: 0.7s;
+				animation-fill-mode: forwards;
+		}
+
+			@keyframes barrafondoielk {
+				0% { opacity: 0; }
+
+				100% { opacity: 0.6; }
+			}
+
+	.barraielk {
+		position: absolute;
+		z-index: 100;
+		background: linear-gradient(#282E3A, #1B1F25);
+	    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+		height: 100%;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		top: 0;
+		right: 0;
+		display: block;
+				animation-name: barraielkin;
+				animation-duration: 2s;
+				animation-timing-function: cubic-bezier(1,.01,.13,.99);
+				animation-fill-mode: forwards;
+		}
+
+			@keyframes barraielkin {
+				0% { right: -140%; }
+
+				100% { right: 0; }
+			}
+	}
+
+		.barraielk .textoielk {
+			position: absolute;
+			text-align: center;
+			height: 100%;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			opacity: 0;
+			display: block;
+		}
+
+		.barraielk #sombra {
+			position: absolute;
+			width: 100%;
+			height: 5%;
+			bottom: 0;
+			background: linear-gradient(rgba(0, 0, 0, 0), #1B1F25);
+		}
+
+		.barraielk div {
+			overflow-y: scroll;
+			height: 100%;
+		}
+
+			.textoielk {
+				position: relative;
+				text-align: left;
+				margin: 0 3em 0 4em;
+				padding-bottom: 4em;
+			}
+
+				.textoielk h2 {
+					text-transform: uppercase;
+					font-weight: 900;
+					position: relative;
+					font-size: 3rem;
+					top: 20px;
+				}
+
+					.textoielk h2 b {
+						font-weight: bolder;
+					}
+
+				.textoielk p {
+					font-size: 1.5rem;
+					font-weight: 400;
+					line-height: 1.5rem;
+				}
+
+				.textoielk h3 {
+					text-transform: uppercase;
+					font-weight: 900;
+					font-size: 2.25rem;
+					margin-top: 2em;
+				}
+
+				.textoielk img {
+					width: 6em;
+					height: 6em;
+					margin: 1em 1.25em;
+					display: inline-block;
+					background: #f00;
+				}
+
+					.textoielk #firstimg {
+						position: relative;
+						top: -1.1em;
+					}
+
+.ielkcont {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.volverielk {
+	position: absolute;
+	z-index: 101;
+	cursor: pointer;
+	border-radius: 50%;
+	background-color: #282E3A;
+	box-shadow: 0 0 20px 20px #282E3A;
+	transform: scale(1.3,1.3);
+	transition: all 0.5s cubic-bezier(1,.01,.13,.99);
+	right: 3em;
+	top: 2em;
+	}
+
+	.volverielk span {
+		color: #fff;
+		font-size: 21px;
+		font-weight: 800;
+	}
+
+	.volverielk:active, .volverielk:hover { transform: scale(1.5,1.5);  }
+
+	.barraoutielk {
+			position: absolute;
+			left: -140%;
+			z-index: 200;
+			background: linear-gradient(#282E3A, #1B1F25);
+			height: 100%;
+			width: 100%;
+			display: block;
+				animation-name: barraout;
+				animation-duration: 2s;
+				animation-timing-function: cubic-bezier(1,.01,.13,.99);
+				animation-delay: 0.2s;
+				animation-fill-mode: forwards;
+		}
+
+/* /IELK */
+
+/* Utilidades */
+
+.clear {
+	clear: both;
+}
+
+.fleft {
+	float: left;
+}
+
+.fright {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+
+/* /Utilidades */
+
+@import url('screen.css');

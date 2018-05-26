@@ -1,0 +1,16 @@
+/* 
+    Authored by Myval Studio
+    Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+    Mobile First Seed by Myval Studio @ Update 05/04/2018
+    
+    Copyright 2018 Myval Studio
+*/
+
+/* Mobile first:
+    As this is the mobile first seed, we need to adapt the webpage to biggest screen, 
+    starting at 800px (to include small screens in the mobile view) */
+
+    @media all and (min-device-width: 800px){
+
+    }

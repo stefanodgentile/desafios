@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <title>Desafío 11</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+	<style>
+		main {
+			padding: 10em;
+		}
+		
+		main #container {
+			padding: 8em;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<main>
+	<div class="row">
+			<div class="col-6">
+				<form>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+						<input type="text" class="form-control" id="inputName" placeholder="Name plz">
+						</div>
+						<div class="form-group col-md-6">
+						<input type="text" class="form-control" id="inputLastName" placeholder="Now surname">
+						</div>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="inputAddress" placeholder="Tell me more bout u">
+					</div>
+					<button type="button" class="btn btn-primary" id="send">Send</button>
+				</form>
+			</div>
+	</div>
+	<div class="row">
+		<div class="col-6" id="container">
+		</div>
+	</div>
+</main>
+
+<script>
+$("#send").click(function(){
+	if($('#inputName').val() != ""){ 
+		$("#container").append('<div class="col-10" id="containter"><div class="card col-8"><div class="card-body"><h5 class="card-title" id="nameCont">'+$("#inputName").val()+' '+$("#inputLastName").val()+'</h5><p class="card-text" id="addressCont">'+$("#inputAddress").val()+'</p></div></div></div>');
+		$("form")[0].reset();
+	} else {
+			alert("Fill all thEVERYTHING!!!!!");
+	}
+});
+</script>
+
+</body>
+</html>

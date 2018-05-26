@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+body {
+	background-color: rgb(84, 87, 114);
+	overflow-x: hidden;
+	font-family: 'Varela Round', sans-serif;
+	font-weight: 600;
+}
+
+	section div:nth-child(1) { grid-area: one }
+	section div:nth-child(2) { grid-area: two }
+	section div:nth-child(3) { grid-area: three }
+	section div:nth-child(4) { grid-area: four }
+	section div:nth-child(5) { grid-area: five }
+	section div:nth-child(6) { grid-area: six }
+	section div:nth-child(7) { grid-area: seven }
+	section div:nth-child(8) { grid-area: eight }
+	section div:nth-child(9) { grid-area: nine }
+	section div:nth-child(10) { grid-area: ten }
+	section div:nth-child(11) { grid-area: eleven }
+	section div:nth-child(12) { grid-area: twelve }
+
+section div {
+	background: #191A27;
+	color: white;
+	font-size: 3rem;
+	box-sizing: border-box;
+	padding-top: 1em;
+	padding-left: 2em;
+}
+
+section {
+	padding: 2em;
+	display: grid;
+	grid-template-columns: repeat(4, 24.5%);
+	grid-template-rows: repeat(6, 300px);
+	grid-gap: 1em 1em;
+	grid-template-areas: 
+		"one one two three"
+		"four five six ."
+		"seven seven eight nine"
+		"seven seven ten ."
+		"eleven eleven eleven twelve"
+}
+
+@media all and (max-device-width: 800px){
+
+	html,body {
+		width: 100%;
+		height: 100%;
+	}
+
+	section {
+		padding: 0.5em;
+		display: grid;
+		grid-template-columns: repeat(4, 23%);
+		grid-template-rows: repeat(3, 300px);
+		grid-gap: 0.5em;
+		grid-template-areas: 
+			"one two"
+			"three four"
+			"five ."
+			"six seven ten ."
+			"eight nine eleven twelve"
+	}
+
+	section div {
+		padding-top: .25em;
+		padding-left: .5em;
+		font-size: 2rem;
+	}
+
+}
